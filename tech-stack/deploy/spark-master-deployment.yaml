@@ -1,0 +1,23 @@
+apiVersion: apps/v1 
+kind: Deployment
+metadata:
+  name: spark-master
+  namespace: ambassador
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: spark-master
+  template:
+    metadata:
+      labels:
+        app: spark-master
+    spec:
+      containers:
+        - name: spark-master
+          image: kai303/tl-spark
+          command: ["/opt/spark/bin/spark-class","org.apache.spark.deploy.master.Master","--properties-file","/default.conf"]
+          ports:
+            - containerPort: 7077
+            - containerPort: 8080
+            - containerPort: 6066

@@ -1,0 +1,8 @@
+apiVersion: getambassador.io/v2
+kind: Mapping
+metadata:
+  name: airflow-backend
+  namespace: ambassador
+spec:
+  prefix: /dags-api
+  service: airflow-balancer-service

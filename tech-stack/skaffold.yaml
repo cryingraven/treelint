@@ -1,0 +1,17 @@
+apiVersion: skaffold/v1beta15
+kind: Config
+build:
+  tagPolicy:
+    envTemplate:
+      template: "{{.IMAGE_NAME}}:1.2.0"
+  artifacts:
+    - context: ./spark-image
+      image: kai303/tl-spark
+deploy:
+  kubectl:
+    manifests:
+      - deploy/**
+profiles:
+  - name: cloudbuild
+    build:
+      googleCloudBuild: {}

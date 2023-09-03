@@ -1,0 +1,601 @@
+{% extends "ml_layout.html" -%}
+{% block css -%}
+<link href="https://static.deretdata.com/vendors/datatables.net-dt/css/jquery.dataTables.min.css" rel="stylesheet" type="text/css" />
+<link href="https://static.deretdata.com/vendors/datatables.net-responsive-dt/css/responsive.dataTables.min.css" rel="stylesheet" type="text/css" />
+<!-- ION CSS -->
+<link href="https://static.deretdata.com/vendors/ion-rangeslider/css/ion.rangeSlider.css" rel="stylesheet" type="text/css">
+<link href="https://static.deretdata.com/vendors/ion-rangeslider/css/ion.rangeSlider.skinHTML5.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+    td.details-control{
+        background-image: url(https://static.deretdata.com/img/icons8-plus.png);
+        background-size: 25px 25px;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+</style>
+{%- endblock css %}
+{% block content -%}
+<div class="container-fluid px-xxl-65 px-xl-20">
+    <input type="hidden" id="appid" value="{{app.data_folder}}"/>
+    <br/>
+    <div class="hk-pg-header">
+        <h4 class="hk-pg-title" style="margin-top: 10px">Process</h4>
+    </div>
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="form-group">
+                <label>Data Set</label>
+                <div class="input-group">
+                    <select class="form-control" id="dataid">
+                        {%for file in app.files %}
+                        <option value="{{file.name.split(' !~! ')[1]}}">{{file.name.split(' !~! ')[0]}}</option>
+                        {%endfor%}
+                    </select>
+                    <div class="input-group-append">
+                        <button class="btn btn-dark" id="select">LOAD</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+        </div>
+        <div class="col-sm-4">
+            <div class="form-group">
+                <label>Feature</label>
+                <select class="form-control" id="feature-list">
+                    <option value="clustering">Clustering</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="row" id="detail" style="display: none">
+        <div class="col-sm-6">
+            <center>
+                <br/>
+                <img src="https://static.deretdata.com/img/icons8-artificial_intelligence.png" style="display: block;margin-left: auto;margin-right: auto;" width="240" class="img-fluid" alt="img">
+                <br/>
+                Testing Data Size (%)
+                <br/>
+                <div class="range-slider"></div>
+                <button class="btn btn-info btn-rounded">
+                    Start Modeling
+                </button>
+            </center>
+        </div>
+        <div class="col-sm-6">
+            <div id="chart" class="echart" style="height:294px;margin-top: 10px"></div>
+            <div class="row" id="sum">
+                <div class="col-sm-6">
+                    Rows <br/>
+                    <h4 id="row"></h4>
+                </div>
+                <div class="col-sm-6">
+                    Column <br/>
+                    <h4 id="column"></h4>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-12">
+            <br/>
+            <br/>
+            <div class="table-wrap">
+                <table id="datable" class="table w-100 display">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Name</th>
+                            <th>Type</th>
+                            <th>Count</th>
+                            <th>Unique</th>
+                            <th>Mean</th>
+                            <th>Std Deviation</th>
+                            <th>Min</th>
+                            <th>Max</th>
+                            <th>Null</th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+{%- endblock content %}
+{% block script -%}
+<script src="https://static.deretdata.com/vendors/datatables.net/js/jquery.dataTables.min.js"></script>
+<script src="https://static.deretdata.com/vendors/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
+<script src="https://static.deretdata.com/vendors/datatables.net-dt/js/dataTables.dataTables.min.js"></script>
+<script src="https://static.deretdata.com/vendors/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+<script src="https://static.deretdata.com/vendors/datatables.net-buttons-bs4/js/buttons.bootstrap4.min.js"></script>
+<script src="https://static.deretdata.com/vendors/datatables.net-buttons/js/buttons.flash.min.js"></script>
+<script src="https://static.deretdata.com/vendors/echarts/dist/echarts-en.min.js"></script>
+<script src="https://static.deretdata.com/vendors/ion-rangeslider/js/ion.rangeSlider.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#detail').hide()
+        $('#sum').hide()
+        $(".range-slider").ionRangeSlider({
+            type: "single",
+            min: 10,
+            max: 50,
+            from: 20,
+            keyboard: true,
+            onStart: function (data) {
+                console.log("onStart");
+            },
+            onChange: function (data) {
+                console.log("onChange");
+            },
+            onFinish: function (data) {
+                console.log("onFinish");
+            },
+            onUpdate: function (data) {
+                console.log("onUpdate");
+            }
+        });
+        $('#select').on('click',function (e) {
+            $('#detail').show()
+            $.ajax({
+                url: "/ml_get_field/" + $('#appid').val() + "/" + $('#dataid').val(),
+                success: function (data) {
+                    var json=JSON.parse(data)
+                    var feature='';
+                    feature+='<option value="Clustering">Clustering</option>'
+                    $.each(json,function (x) {
+                        feature+='<option value="'+json[x]+'">'+json[x]+'</option>'
+                    })
+                    $('#feature-list').html(feature)
+                    $.ajax({
+                        url: "/ml_show_feature/" + $('#appid').val() + "/" + $('#dataid').val()+'?feature=Clustering',
+                        success: function (data) {
+                            var json=JSON.parse(data)
+                            $('#sum').show()
+                            $('#row').html(json.rows.toString())
+                            $('#column').html(json.columns.toString())
+                            console.log(json)
+                            initTable()
+                            chartmain(json)
+                        }
+                    })
+                }
+            })
+        })
+        $('#feature-list').on('change',function (e) {
+            $.ajax({
+                url: "/ml_show_feature/" + $('#appid').val() + "/" + $('#dataid').val()+'?feature='+encodeURI($(this).val()),
+                success: function (data) {
+                    var json=JSON.parse(data)
+                    $('#sum').show()
+                    $('#row').html(data.size)
+                    $('#column').html(data.columns)
+                    initTable()
+                    chartmain(json)
+                }
+            })
+        })
+    });
+    function initTable() {
+        var table = $('#datable').DataTable();
+        table.destroy()
+        var data=$('#datable').DataTable({
+            bPaginate: false,
+            info:     false,
+            bFilter:     false,
+            serverSide: true,
+            ordering: false,
+            ajax: {
+                url: "/ml_eda_process/"+$('#appid').val()+"/" +$('#dataid').val() ,
+                dataSrc: 'data',
+                type: 'GET',
+                data: function (args) {
+                    args.feature= $('#feature-list').val()
+                    return {
+                        "args": JSON.stringify(args)
+                    };
+                }
+            },
+            columns: [
+                {
+                    "class":          "details-control",
+                    "data":           null,
+                    "defaultContent": ""
+                },
+                {data: 'name',name: 'name'},
+                {data: 'types',name: 'types'},
+                {data: 'count',name: 'count'},
+                {data: 'unique',name: 'unique'},
+                {data: 'mean',name: 'mean'},
+                {data: 'std',name: 'std'},
+                {data: 'min',name: 'min'},
+                {data: 'max',name: 'max'},
+                {data: 'null',name: 'null'}
+            ]
+        });
+        var  detailRows=[]
+        $('#datable tbody').on( 'click', 'tr', function () {
+            var tr = $(this);
+            var row = data.row( tr );
+            var idx = $.inArray( tr.attr('id'), detailRows );
+
+            if ( row.child.isShown() ) {
+                tr.removeClass( 'details' );
+                row.child.hide();
+
+                // Remove from the 'open' array
+                detailRows.splice( idx, 1 );
+            }
+            else {
+                tr.addClass( 'details' );
+                row.child( format(row.data() ) ).show();
+                if(typeof row.data()!='undefined'){
+                    if(typeof row.data().hist!='undefined'){
+                        chart(row)
+                    }
+                    if(typeof row.data().bar!='undefined'){
+                        chart2(row)
+                    }
+                }
+                // Add to the 'open' array
+                if ( idx === -1 ) {
+                    detailRows.push( tr.attr('id') );
+                }
+
+            }
+        } );
+        data.on( 'draw', function () {
+            $.each( detailRows, function ( i, id ) {
+                $('#'+id+' td.details-control').trigger( 'click' );
+            } );
+        } );
+    }
+    function format (d) {
+        var table_corr='<table class="table table-hover w-100 display" style="width: 600px !important;overflow-x: scroll">'
+        var histo=''
+        var bar=''
+        var returnData=''
+        if( typeof d!='undefined'){
+            if(typeof d.hist != 'undefined'){
+                histo='<h6>Histogram</h6><br/>'+
+                    '<div id="chart-'+d.id+'" class="echart" style="height:300px;width 400px !important;margin-top: 10px"></div>'
+            }
+            if(typeof d.bar != 'undefined'){
+                bar='<h6>Distribution</h6><br/>'+
+                    '<div id="chart-'+d.id+'" class="echart" style="height:300px;width 400px !important;margin-top: 10px"></div>'
+            }
+            returnData='<div class="row"><div class="col-sm-12"> ' +
+                '<center>' +
+                histo+bar
+            if(typeof d.corr != 'undefined') {
+                var body = '<tr>'
+                var head = '';
+                for (var i = 0; i < d.corr.length; i++) {
+                    head += '<th>' + d.corr[i].toString() + '</th>'
+                    body += '<td>' + Number(d.corr_val[i]).toFixed(4).toString() + '</td>'
+                }
+                body += '</tr>'
+                table_corr += '<thead>'
+                table_corr += head
+                table_corr += '</thead>'
+                table_corr += '<tbody>'
+                table_corr += body
+                table_corr += '</tbody>'
+                table_corr += '</table>'
+                returnData +='<h6>Pearson Corellation</h6><br/>'
+                returnData += table_corr
+                returnData += '</center>'
+            }
+        }
+        returnData+='</div>'
+        returnData+='</div>'
+        return  returnData
+
+    }
+    function chartmain(data) {
+        if(data.types=="Classification"){
+            $('#chart').show()
+            var eChart_1 = echarts.init(document.getElementById("chart"));
+            var option = {
+                color: ['#074080'],
+                title: {
+                    text: 'Data Overview',
+                    show: true,
+                    left: 'center',
+                    top: 10
+                },
+                tooltip: {
+                    show: true,
+                    trigger: 'axis',
+                    backgroundColor: '#fff',
+                    borderRadius:6,
+                    padding:6,
+                    axisPointer:{
+                        lineStyle:{
+                            width:0,
+                        }
+                    },
+                    textStyle: {
+                        color: '#324148',
+                        fontFamily: '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"',
+                        fontSize: 12
+                    }
+                },
+
+                xAxis: [{
+                    type: 'category',
+                    data: data['bar'],
+                    axisLine: {
+                        show:false
+                    },
+                    axisTick: {
+                        show:false
+                    },
+                    axisLabel: {
+                        textStyle: {
+                            color: '#5e7d8a'
+                        }
+                    }
+                }],
+                yAxis: {
+                    type: 'value',
+                    axisLine: {
+                        show:false
+                    },
+                    axisTick: {
+                        show:false
+                    },
+                    axisLabel: {
+                        textStyle: {
+                            color: '#5e7d8a'
+                        }
+                    },
+                    splitLine: {
+                        lineStyle: {
+                            color: '#eaecec',
+                        }
+                    }
+                },
+                grid: {
+                    top: '3%',
+                    left: '3%',
+                    right: '3%',
+                    bottom: '3%',
+                    containLabel: true
+                },
+                series: [{
+                    data: data['bar_val'],
+                    type: 'bar',
+                    barMaxWidth: 30,
+                    itemStyle: {
+                        normal: {
+                            barBorderRadius: [6, 6, 0, 0] ,
+                        }
+                    },
+                }]
+            };
+            eChart_1.setOption(option);
+            eChart_1.resize();
+        }else if(data.types=="Regression"){
+            $('#chart').show()
+            var chart = echarts.init(document.getElementById("chart"));
+            var interval;
+            var min = Infinity;
+            var max = -Infinity;
+            var detail=[]
+            for(var i=0;i<data.hist.length;i++){
+                var datum=[data.bins[i],data.bins[i+1],data.hist[i]]
+                interval=data.bins[i+1]-data.bins[i]
+                min = Math.min(min, data.bins[i]);
+                max = Math.max(max, data.bins[i+1]);
+                detail.push(datum)
+            }
+
+            function renderItem(params, api) {
+                var yValue = api.value(2);
+                var start = api.coord([api.value(0), yValue]);
+                var size = api.size([api.value(1) - api.value(0) , yValue]);
+                var style = api.style();
+                return {
+                    type: 'rect',
+                    shape: {
+                        x: start[0] + 1,
+                        y: start[1],
+                        width: size[0]-2,
+                        height: size[1]
+                    },
+                    style: style
+                };
+            }
+
+            option = {
+                title: {
+                    text: 'Data Overview',
+                    show: true,
+                    left: 'center',
+                    top: 10
+                },
+                tooltip:{
+                    show: true
+                },
+                color: ['#074080'],
+                grid: {
+                    top: 80,
+                    containLabel: true
+                },
+                xAxis: [{
+                    type: 'value',
+                    min: min,
+                    max: max
+                }],
+                yAxis: [{
+                    type: 'value',
+                }],
+                series: [{
+                    name: 'height',
+                    type: 'custom',
+                    renderItem: renderItem,
+                    label: {
+                        show: false
+                    },
+                    encode: {
+                        x: [0, 1],
+                        y: 2,
+                        tooltip: 2,
+                        label: 2
+                    },
+                    data: detail
+                }]
+            };
+            chart.setOption(option);
+        }else {
+            $('#chart').hide()
+        }
+    }
+    function chart2(row) {
+        var eChart_1 = echarts.init(document.getElementById("chart-"+row.data().id));
+        var option = {
+            color: ['#074080'],
+            tooltip: {
+                show: true,
+                trigger: 'axis',
+                backgroundColor: '#fff',
+                borderRadius:6,
+                padding:6,
+                axisPointer:{
+                    lineStyle:{
+                        width:0,
+                    }
+                },
+                textStyle: {
+                    color: '#324148',
+                    fontFamily: '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"',
+                    fontSize: 12
+                }
+            },
+
+            xAxis: [{
+                type: 'category',
+                data: row.data()['bar'],
+                axisLine: {
+                    show:false
+                },
+                axisTick: {
+                    show:false
+                },
+                axisLabel: {
+                    textStyle: {
+                        color: '#5e7d8a'
+                    }
+                }
+            }],
+            yAxis: {
+                type: 'value',
+                axisLine: {
+                    show:false
+                },
+                axisTick: {
+                    show:false
+                },
+                axisLabel: {
+                    textStyle: {
+                        color: '#5e7d8a'
+                    }
+                },
+                splitLine: {
+                    lineStyle: {
+                        color: '#eaecec',
+                    }
+                }
+            },
+            grid: {
+                top: '3%',
+                left: '3%',
+                right: '3%',
+                bottom: '3%',
+                containLabel: true
+            },
+            series: [{
+                data: row.data()['bar_val'],
+                type: 'bar',
+                barMaxWidth: 30,
+                itemStyle: {
+                    normal: {
+                        barBorderRadius: [6, 6, 0, 0] ,
+                    }
+                },
+            }]
+        };
+        eChart_1.setOption(option);
+        eChart_1.resize();
+    }
+    function chart(row) {
+        var chart = echarts.init(document.getElementById("chart-"+row.data().id));
+        var interval;
+        var min = Infinity;
+        var max = -Infinity;
+        var detail=[]
+        for(var i=0;i<row.data().hist.length;i++){
+            var datum=[row.data().bins[i],row.data().bins[i+1],row.data().hist[i]]
+            interval=row.data().bins[i+1]-row.data().bins[i]
+            min = Math.min(min, row.data().bins[i]);
+            max = Math.max(max, row.data().bins[i+1]);
+            detail.push(datum)
+        }
+
+        function renderItem(params, api) {
+            var yValue = api.value(2);
+            var start = api.coord([api.value(0), yValue]);
+            var size = api.size([api.value(1) - api.value(0) , yValue]);
+            var style = api.style();
+            return {
+                type: 'rect',
+                shape: {
+                    x: start[0] + 1,
+                    y: start[1],
+                    width: size[0]-2,
+                    height: size[1]
+                },
+                style: style
+            };
+        }
+
+        option = {
+            title: {
+                show: false,
+                left: 'center',
+                top: 10
+            },
+            tooltip:{
+                show: true
+            },
+            color: ['#074080'],
+            grid: {
+                top: 80,
+                containLabel: true
+            },
+            xAxis: [{
+                type: 'value',
+                min: min,
+                max: max
+            }],
+            yAxis: [{
+                type: 'value',
+            }],
+            series: [{
+                name: 'height',
+                type: 'custom',
+                renderItem: renderItem,
+                label: {
+                    show: false
+                },
+                encode: {
+                    x: [0, 1],
+                    y: 2,
+                    tooltip: 2,
+                    label: 2
+                },
+                data: detail
+            }]
+        };
+        chart.setOption(option);
+    }
+</script>
+{%- endblock script %}

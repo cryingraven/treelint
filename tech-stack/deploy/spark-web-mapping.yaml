@@ -1,0 +1,8 @@
+apiVersion: getambassador.io/v2
+kind: Mapping
+metadata:
+  name: spark-api-backend
+  namespace: ambassador
+spec:
+  prefix: /spark_api
+  service: spark-api-service

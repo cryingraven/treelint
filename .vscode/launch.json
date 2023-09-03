@@ -1,0 +1,30 @@
+// launch.json contains information needed for the debugger to attach to  processes
+// See https://code.visualstudio.com/Docs/editor/debugging#_launch-configurations
+// for documentation about how to create and manage configurations
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "cloudcode.kubernetes",
+      "request": "launch",
+      "name": "Run All On Kubernetes",
+      "skaffoldConfig": "${workspaceFolder}/skaffold.yaml",
+      "watch": false,
+      "cleanUp": true,
+      "portForward": true,
+      "imageRegistry": "gcr.io/innate-agency-250312"
+    },
+    {
+      "podSelector": {
+        "app": "webapp"
+      },
+      "type": "cloudcode",
+      "request": "attach",
+      "localRoot": "${workspaceFolder}",
+      "language": "Python",
+      "remoteRoot": "/",
+      "name": "Debug on Kubernetes",
+      "debugPort": 3000
+    }
+  ]
+}

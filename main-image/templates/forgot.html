@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Deret Data | Forgot Password</title>
+    <meta name="description" content="Deret Data Forgot Password" />
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+
+<!-- HK Wrapper -->
+<div class="hk-wrapper">
+
+    <!-- Main Content -->
+    <div class="hk-pg-wrapper hk-auth-wrapper">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xl-5 pa-0">
+                    <div id="owl_demo_1" class="owl-carousel dots-on-item owl-theme">
+                        <div class="fadeOut item auth-cover-img overlay-wrap" style="background-image:url(/img/bg2.jpg);">
+                            <div class="auth-cover-info py-xl-0 pt-100 pb-50">
+                                <div class="auth-cover-content text-center w-xxl-75 w-sm-90 w-xs-100">
+                                    <h1 class="display-3 text-white mb-20">Build An AI on CLoud.</h1>
+                                    <p class="text-white">The purpose of lorem ipsum is to create a natural looking block of text (sentence, paragraph, page, etc.) that doesn't distract from the layout. Again during the 90s as desktop publishers bundled the text with their software.</p>
+                                </div>
+                            </div>
+                            <div class="bg-overlay bg-trans-dark-50"></div>
+                        </div>
+                        <div class="fadeOut item auth-cover-img overlay-wrap" style="background-image:url(/img/bg1.jpg);">
+                            <div class="auth-cover-info py-xl-0 pt-100 pb-50">
+                                <div class="auth-cover-content text-center w-xxl-75 w-sm-90 w-xs-100">
+                                    <h1 class="display-3 text-white mb-20">Experience matters for good applications.</h1>
+                                    <p class="text-white">The passage experienced a surge in popularity during the 1960s when Letraset used it on their dry-transfer sheets, and again during the 90s as desktop publishers bundled the text with their software.</p>
+                                </div>
+                            </div>
+                            <div class="bg-overlay bg-trans-dark-50"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-7 pa-0">
+                    <div class="auth-form-wrap py-xl-0 py-50">
+                        <div class="auth-form w-xxl-65 w-xl-75 w-sm-90 w-100 card pa-25 shadow-lg">
+                            <form method="post" action="/do_login">
+                                <h1 class="display-4 mb-10">
+                                    <img src="https://static.deretdata.com/img/deret.png" style="width: 50%;margin: auto"/>
+                                </h1>
+                                <p class="mb-30">Forgot Password.</p>
+                                {% for message in get_flashed_messages() %}
+                                <div class="alert alert-danger">{{ message }}</div>
+                                {% endfor %}
+                                <div class="form-group">
+                                    <label>Email</label>
+                                    <input class="form-control" placeholder="Email" type="text" name="email">
+                                </div>
+                                <button class="btn btn-primary btn-block" type="submit">Send Email</button>
+                                <a class="btn btn-danger btn-block" href="https://static.deretdata.com/login">Back</a>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /Main Content -->
+
+</div>
+<!-- /HK Wrapper -->
+<script src="vendors/jquery/dist/jquery.min.js"></script>
+<script src="vendors/popper.js/dist/umd/popper.min.js"></script>
+<script src="vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="js/jquery.slimscroll.js"></script>
+<script src="js/dropdown-bootstrap-extended.js"></script>
+<script src="vendors/owl.carousel/dist/owl.carousel.min.js"></script>
+<script src="js/feather.min.js"></script>
+<script src="js/init.js"></script>
+<script src="js/login-data.js"></script>
+</body>
+
+</html>

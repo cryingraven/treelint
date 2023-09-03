@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="e1cd8e24-2cf5-4818-98d7-d1ad79665b33" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
+  <component name="ComposerSettings">
+    <execution>
+      <executable />
+    </execution>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="1" />
+  </component>
+  <component name="ProjectId" id="1YQK8UQHW5EHi8U9NEWqYDExOb6" />
+  <component name="ProjectViewState">
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="android.sdk.path" value="$USER_HOME$/Library/Android/sdk" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
+    <property name="show.migrate.to.gradle.popup" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app" />
+      <recent name="$PROJECT_DIR$/dags" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Cloud Code: Kubernetes.CloudBuild Airflow">
+    <configuration name="run" type="PythonConfigurationType" factoryName="Python">
+      <module name="airflow-image" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="/usr/local/bin/python3.7" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/run.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="CloudBuild Airflow" type="google-container-tools-skaffold-run-config" factoryName="google-container-tools-skaffold-run-config-dev" show_console_on_std_err="false" show_console_on_std_out="false">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="cleanupDeployments" value="false" />
+      <option name="envVariables" />
+      <option name="imageRepositoryOverride" value="gcr.io/innate-agency-250312" />
+      <option name="kubeconfigFile" />
+      <option name="kubernetesContext" />
+      <option name="redeployOnChanges" value="false" />
+      <option name="skaffoldConfigurationFilePath" value="$PROJECT_DIR$/skaffold-airflow.yaml" />
+      <option name="skaffoldNamespace" />
+      <option name="skaffoldProfile" value="cloudbuild" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Run Airflow" type="google-container-tools-skaffold-run-config" factoryName="google-container-tools-skaffold-run-config-dev" show_console_on_std_err="false" show_console_on_std_out="false">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="cleanupDeployments" value="false" />
+      <option name="envVariables" />
+      <option name="imageRepositoryOverride" value="gcr.io/innate-agency-250312" />
+      <option name="kubeconfigFile" />
+      <option name="kubernetesContext" />
+      <option name="redeployOnChanges" value="false" />
+      <option name="skaffoldConfigurationFilePath" value="$PROJECT_DIR$/skaffold-airflow.yaml" />
+      <option name="skaffoldNamespace" />
+      <option name="skaffoldProfile" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Cloud Code: Kubernetes.Run Airflow" />
+      <item itemvalue="Cloud Code: Kubernetes.CloudBuild Airflow" />
+      <item itemvalue="Python.run" />
+    </list>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e1cd8e24-2cf5-4818-98d7-d1ad79665b33" name="Default Changelist" comment="" />
+      <created>1582869219247</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1582869219247</updated>
+      <workItem from="1582869223248" duration="4645000" />
+      <workItem from="1582877675353" duration="553000" />
+      <workItem from="1582887370140" duration="9000" />
+      <workItem from="1583316683018" duration="1689000" />
+      <workItem from="1583729883891" duration="605000" />
+      <workItem from="1588841055898" duration="65000" />
+      <workItem from="1591074516685" duration="305000" />
+      <workItem from="1591150099731" duration="452000" />
+      <workItem from="1591206185722" duration="7000" />
+      <workItem from="1591217471573" duration="368000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="184" y="97" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1583317071568">
+      <screen x="0" y="23" width="1440" height="825" />
+    </state>
+    <state x="184" y="97" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.825@0.23.1440.825" timestamp="1583317071568" />
+    <state width="1398" height="213" key="GridCell.Tab.0.bottom" timestamp="1583318663097">
+      <screen x="0" y="23" width="1440" height="825" />
+    </state>
+    <state width="1398" height="213" key="GridCell.Tab.0.bottom/0.23.1440.825@0.23.1440.825" timestamp="1583318663097" />
+    <state width="1398" height="213" key="GridCell.Tab.0.center" timestamp="1583318663096">
+      <screen x="0" y="23" width="1440" height="825" />
+    </state>
+    <state width="1398" height="213" key="GridCell.Tab.0.center/0.23.1440.825@0.23.1440.825" timestamp="1583318663096" />
+    <state width="1398" height="213" key="GridCell.Tab.0.left" timestamp="1583318663096">
+      <screen x="0" y="23" width="1440" height="825" />
+    </state>
+    <state width="1398" height="213" key="GridCell.Tab.0.left/0.23.1440.825@0.23.1440.825" timestamp="1583318663096" />
+    <state width="1398" height="213" key="GridCell.Tab.0.right" timestamp="1583318663097">
+      <screen x="0" y="23" width="1440" height="825" />
+    </state>
+    <state width="1398" height="213" key="GridCell.Tab.0.right/0.23.1440.825@0.23.1440.825" timestamp="1583318663097" />
+    <state x="208" y="23" width="1024" height="825" key="SettingsEditor" timestamp="1583316776119">
+      <screen x="0" y="23" width="1440" height="825" />
+    </state>
+    <state x="208" y="23" width="1024" height="825" key="SettingsEditor/0.23.1440.825@0.23.1440.825" timestamp="1583316776119" />
+    <state x="463" y="315" key="com.intellij.ide.util.TipDialog" timestamp="1591150154955">
+      <screen x="0" y="23" width="1680" height="984" />
+    </state>
+    <state x="397" y="268" key="com.intellij.ide.util.TipDialog/0.23.1440.825@0.23.1440.825" timestamp="1582887370117" />
+    <state x="463" y="315" key="com.intellij.ide.util.TipDialog/0.23.1680.984@0.23.1680.984" timestamp="1591150154955" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/airflow_image$run.coverage" NAME="run Coverage Results" MODIFIED="1582870527285" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+  </component>
+</project>

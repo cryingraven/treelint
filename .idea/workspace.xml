@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="e2202399-2a87-407a-bad7-724af63df99a" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
+  <component name="ComposerSettings">
+    <execution>
+      <executable />
+    </execution>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/main-image/assets" />
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="1" />
+  </component>
+  <component name="ProjectId" id="1YQuyQOD3ldEYtWgL7Zls6F9iqc" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="android.sdk.path" value="$USER_HOME$/Library/Android/sdk" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/spark-image" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="show.migrate.to.gradle.popup" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/spark-image" />
+      <recent name="$PROJECT_DIR$/alluxio-image" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/main-image" />
+      <recent name="$PROJECT_DIR$/alluxio-image" />
+      <recent name="$PROJECT_DIR$/airflow-image" />
+      <recent name="$PROJECT_DIR$/tech-stack" />
+      <recent name="$PROJECT_DIR$/deploy-airflow" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Cloud Code: Kubernetes.CBuild Stack">
+    <configuration name="CBuild Airflow" type="google-container-tools-skaffold-run-config" factoryName="google-container-tools-skaffold-run-config-dev" show_console_on_std_err="false" show_console_on_std_out="false">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="cleanupDeployments" value="false" />
+      <option name="envVariables" />
+      <option name="imageRepositoryOverride" value="gcr.io/innate-agency-250312" />
+      <option name="kubeconfigFile" />
+      <option name="kubernetesContext" />
+      <option name="redeployOnChanges" value="false" />
+      <option name="skaffoldConfigurationFilePath" value="$PROJECT_DIR$/skaffold-airflow.yaml" />
+      <option name="skaffoldNamespace" />
+      <option name="skaffoldProfile" value="cloudbuild" />
+      <method v="2" />
+    </configuration>
+    <configuration name="CBuild Alluxio" type="google-container-tools-skaffold-run-config" factoryName="google-container-tools-skaffold-run-config-dev" show_console_on_std_err="false" show_console_on_std_out="false">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="cleanupDeployments" value="false" />
+      <option name="envVariables" />
+      <option name="imageRepositoryOverride" value="gcr.io/innate-agency-250312" />
+      <option name="kubeconfigFile" />
+      <option name="kubernetesContext" />
+      <option name="redeployOnChanges" value="false" />
+      <option name="skaffoldConfigurationFilePath" value="$PROJECT_DIR$/skaffold-alluxio.yaml" />
+      <option name="skaffoldNamespace" />
+      <option name="skaffoldProfile" value="cloudbuild" />
+      <method v="2" />
+    </configuration>
+    <configuration name="CBuild Stack" type="google-container-tools-skaffold-run-config" factoryName="google-container-tools-skaffold-run-config-dev" show_console_on_std_err="false" show_console_on_std_out="false">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="cleanupDeployments" value="false" />
+      <option name="envVariables" />
+      <option name="imageRepositoryOverride" value="gcr.io/innate-agency-250312" />
+      <option name="kubeconfigFile" />
+      <option name="kubernetesContext" />
+      <option name="redeployOnChanges" value="false" />
+      <option name="skaffoldConfigurationFilePath" value="$PROJECT_DIR$/skaffold.yaml" />
+      <option name="skaffoldNamespace" />
+      <option name="skaffoldProfile" value="cloudbuild" />
+      <method v="2" />
+    </configuration>
+    <configuration name="CBuild Web" type="google-container-tools-skaffold-run-config" factoryName="google-container-tools-skaffold-run-config-dev" show_console_on_std_err="false" show_console_on_std_out="false">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="cleanupDeployments" value="false" />
+      <option name="envVariables" />
+      <option name="imageRepositoryOverride" value="gcr.io/innate-agency-250312" />
+      <option name="kubeconfigFile" />
+      <option name="kubernetesContext" />
+      <option name="redeployOnChanges" value="false" />
+      <option name="skaffoldConfigurationFilePath" value="$PROJECT_DIR$/skaffold-web.yaml" />
+      <option name="skaffoldNamespace" />
+      <option name="skaffoldProfile" value="cloudbuild" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Run Airflow" type="google-container-tools-skaffold-run-config" factoryName="google-container-tools-skaffold-run-config-dev" show_console_on_std_err="false" show_console_on_std_out="false">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="cleanupDeployments" value="false" />
+      <option name="envVariables" />
+      <option name="imageRepositoryOverride" value="gcr.io/innate-agency-250312" />
+      <option name="kubeconfigFile" />
+      <option name="kubernetesContext" />
+      <option name="redeployOnChanges" value="false" />
+      <option name="skaffoldConfigurationFilePath" value="$PROJECT_DIR$/skaffold-airflow.yaml" />
+      <option name="skaffoldNamespace" />
+      <option name="skaffoldProfile" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Run Alluxio" type="google-container-tools-skaffold-run-config" factoryName="google-container-tools-skaffold-run-config-dev" show_console_on_std_err="false" show_console_on_std_out="false">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="cleanupDeployments" value="false" />
+      <option name="envVariables" />
+      <option name="imageRepositoryOverride" value="gcr.io/innate-agency-250312" />
+      <option name="kubeconfigFile" />
+      <option name="kubernetesContext" />
+      <option name="redeployOnChanges" value="false" />
+      <option name="skaffoldConfigurationFilePath" value="$PROJECT_DIR$/skaffold-alluxio.yaml" />
+      <option name="skaffoldNamespace" />
+      <option name="skaffoldProfile" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Run Stack" type="google-container-tools-skaffold-run-config" factoryName="google-container-tools-skaffold-run-config-dev" show_console_on_std_err="false" show_console_on_std_out="false">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="cleanupDeployments" value="false" />
+      <option name="envVariables" />
+      <option name="imageRepositoryOverride" value="gcr.io/innate-agency-250312" />
+      <option name="kubeconfigFile" />
+      <option name="kubernetesContext" />
+      <option name="redeployOnChanges" value="false" />
+      <option name="skaffoldConfigurationFilePath" value="$PROJECT_DIR$/skaffold.yaml" />
+      <option name="skaffoldNamespace" />
+      <option name="skaffoldProfile" value="cloudbuild" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Run Web" type="google-container-tools-skaffold-run-config" factoryName="google-container-tools-skaffold-run-config-dev" show_console_on_std_err="false" show_console_on_std_out="false">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="cleanupDeployments" value="false" />
+      <option name="envVariables" />
+      <option name="imageRepositoryOverride" value="gcr.io/innate-agency-250312" />
+      <option name="kubeconfigFile" />
+      <option name="kubernetesContext" />
+      <option name="redeployOnChanges" value="false" />
+      <option name="skaffoldConfigurationFilePath" value="$PROJECT_DIR$/skaffold-web.yaml" />
+      <option name="skaffoldNamespace" />
+      <option name="skaffoldProfile" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Cloud Code: Kubernetes.Run Stack" />
+      <item itemvalue="Cloud Code: Kubernetes.CBuild Stack" />
+      <item itemvalue="Cloud Code: Kubernetes.Run Airflow" />
+      <item itemvalue="Cloud Code: Kubernetes.CBuild Airflow" />
+      <item itemvalue="Cloud Code: Kubernetes.Run Web" />
+      <item itemvalue="Cloud Code: Kubernetes.CBuild Web" />
+      <item itemvalue="Cloud Code: Kubernetes.Run Alluxio" />
+      <item itemvalue="Cloud Code: Kubernetes.CBuild Alluxio" />
+    </list>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e2202399-2a87-407a-bad7-724af63df99a" name="Default Changelist" comment="" />
+      <created>1582887392992</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1582887392992</updated>
+      <workItem from="1582887395521" duration="11428000" />
+      <workItem from="1582979234327" duration="5669000" />
+      <workItem from="1583149304843" duration="2717000" />
+      <workItem from="1583290829515" duration="10679000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/main-image/assets" />
+    </ignored-roots>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="184" y="97" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1583308332510">
+      <screen x="0" y="23" width="1440" height="825" />
+    </state>
+    <state x="184" y="97" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.825@0.23.1440.825" timestamp="1583308332510" />
+    <state width="1398" height="375" key="GridCell.Tab.0.bottom" timestamp="1583308340577">
+      <screen x="0" y="23" width="1440" height="825" />
+    </state>
+    <state width="1398" height="375" key="GridCell.Tab.0.bottom/0.23.1440.825@0.23.1440.825" timestamp="1583308340577" />
+    <state width="1398" height="375" key="GridCell.Tab.0.center" timestamp="1583308340576">
+      <screen x="0" y="23" width="1440" height="825" />
+    </state>
+    <state width="1398" height="375" key="GridCell.Tab.0.center/0.23.1440.825@0.23.1440.825" timestamp="1583308340576" />
+    <state width="1398" height="375" key="GridCell.Tab.0.left" timestamp="1583308340575">
+      <screen x="0" y="23" width="1440" height="825" />
+    </state>
+    <state width="1398" height="375" key="GridCell.Tab.0.left/0.23.1440.825@0.23.1440.825" timestamp="1583308340575" />
+    <state width="1398" height="375" key="GridCell.Tab.0.right" timestamp="1583308340576">
+      <screen x="0" y="23" width="1440" height="825" />
+    </state>
+    <state width="1398" height="375" key="GridCell.Tab.0.right/0.23.1440.825@0.23.1440.825" timestamp="1583308340576" />
+    <state x="221" y="23" width="1024" height="825" key="SettingsEditor" timestamp="1583306789409">
+      <screen x="0" y="23" width="1440" height="825" />
+    </state>
+    <state x="221" y="23" width="1024" height="825" key="SettingsEditor/0.23.1440.825@0.23.1440.825" timestamp="1583306789409" />
+    <state x="397" y="268" key="com.intellij.ide.util.TipDialog" timestamp="1582979235616">
+      <screen x="0" y="23" width="1440" height="825" />
+    </state>
+    <state x="397" y="268" key="com.intellij.ide.util.TipDialog/0.23.1440.825@0.23.1440.825" timestamp="1582979235616" />
+    <state x="301" y="160" width="837" height="550" key="find.popup" timestamp="1583149468577">
+      <screen x="0" y="23" width="1440" height="825" />
+    </state>
+    <state x="301" y="160" width="837" height="550" key="find.popup/0.23.1440.825@0.23.1440.825" timestamp="1583149468577" />
+  </component>
+</project>

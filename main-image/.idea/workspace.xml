@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="f2ada603-be0a-403d-b137-e0fd98537804" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
+  <component name="ComposerSettings">
+    <execution>
+      <executable />
+    </execution>
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="1" />
+  </component>
+  <component name="ProjectId" id="1Yeh6oR3W2n8W5sRRIlvcbqEM4r" />
+  <component name="ProjectViewState">
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
+    <property name="android.sdk.path" value="$USER_HOME$/Library/Android/sdk" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.17" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="show.migrate.to.gradle.popup" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/config" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Cloud Code: Kubernetes.Cloud Build">
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <module name="main-image" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Cloud Build" type="google-container-tools-skaffold-run-config" factoryName="google-container-tools-skaffold-run-config-dev" show_console_on_std_err="false" show_console_on_std_out="false">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="cleanupDeployments" value="false" />
+      <option name="envVariables" />
+      <option name="imageRepositoryOverride" value="gcr.io/innate-agency-250312" />
+      <option name="kubeconfigFile" />
+      <option name="kubernetesContext" />
+      <option name="redeployOnChanges" value="false" />
+      <option name="skaffoldConfigurationFilePath" value="$PROJECT_DIR$/skaffold-web.yaml" />
+      <option name="skaffoldNamespace" />
+      <option name="skaffoldProfile" value="cloudbuild" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Run Web" type="google-container-tools-skaffold-run-config" factoryName="google-container-tools-skaffold-run-config-dev" show_console_on_std_err="false" show_console_on_std_out="false">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="cleanupDeployments" value="false" />
+      <option name="envVariables" />
+      <option name="imageRepositoryOverride" value="gcr.io/innate-agency-250312" />
+      <option name="kubeconfigFile" />
+      <option name="kubernetesContext" />
+      <option name="redeployOnChanges" value="false" />
+      <option name="skaffoldConfigurationFilePath" value="$PROJECT_DIR$/skaffold-web.yaml" />
+      <option name="skaffoldNamespace" />
+      <option name="skaffoldProfile" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="google-container-tools-skaffold-run-config" factoryName="google-container-tools-skaffold-run-config-dev" show_console_on_std_err="false" show_console_on_std_out="false">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="cleanupDeployments" value="true" />
+      <option name="envVariables" />
+      <option name="imageRepositoryOverride" />
+      <option name="kubeconfigFile" />
+      <option name="kubernetesContext" />
+      <option name="redeployOnChanges" value="true" />
+      <option name="skaffoldConfigurationFilePath" value="$PROJECT_DIR$/skaffold-web.yaml" />
+      <option name="skaffoldNamespace" />
+      <option name="skaffoldProfile" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Cloud Code: Kubernetes.Run Web" />
+      <item itemvalue="Cloud Code: Kubernetes.Cloud Build" />
+    </list>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f2ada603-be0a-403d-b137-e0fd98537804" name="Default Changelist" comment="" />
+      <created>1583308794695</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1583308794695</updated>
+      <workItem from="1583308801819" duration="287000" />
+      <workItem from="1583311799058" duration="2887000" />
+      <workItem from="1583664278440" duration="248000" />
+      <workItem from="1583728608477" duration="2674000" />
+      <workItem from="1583744605633" duration="577000" />
+      <workItem from="1583745292145" duration="598000" />
+      <workItem from="1583745950680" duration="6757000" />
+      <workItem from="1584083438737" duration="960000" />
+      <workItem from="1584095661806" duration="82000" />
+      <workItem from="1584097619982" duration="1000" />
+      <workItem from="1584327139619" duration="122000" />
+      <workItem from="1588841186780" duration="39000" />
+      <workItem from="1588842459957" duration="1133000" />
+      <workItem from="1589865990061" duration="83000" />
+      <workItem from="1589866295478" duration="2798000" />
+      <workItem from="1589885752124" duration="6000" />
+      <workItem from="1589887976626" duration="18000" />
+      <workItem from="1590125598793" duration="81000" />
+      <workItem from="1590125703561" duration="273000" />
+      <workItem from="1590126384128" duration="82000" />
+      <workItem from="1590341490128" duration="38000" />
+      <workItem from="1590543399675" duration="2997000" />
+      <workItem from="1591204476671" duration="119000" />
+      <workItem from="1592948018689" duration="565000" />
+      <workItem from="1593300370373" duration="10000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="320" y="101" key="#Deployment" timestamp="1583311989103">
+      <screen x="0" y="23" width="1440" height="825" />
+    </state>
+    <state x="320" y="101" key="#Deployment/0.23.1440.825@0.23.1440.825" timestamp="1583311989103" />
+    <state x="184" y="97" width="1071" height="696" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1583744619383">
+      <screen x="0" y="23" width="1440" height="825" />
+    </state>
+    <state x="184" y="97" width="1071" height="696" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.825@0.23.1440.825" timestamp="1583744619383" />
+    <state width="1398" height="264" key="GridCell.Tab.0.bottom" timestamp="1583817721340">
+      <screen x="0" y="23" width="1440" height="837" />
+    </state>
+    <state width="1398" height="213" key="GridCell.Tab.0.bottom/0.23.1440.825@0.23.1440.825" timestamp="1583747632073" />
+    <state width="1398" height="264" key="GridCell.Tab.0.bottom/0.23.1440.837@0.23.1440.837" timestamp="1583817721340" />
+    <state width="1398" height="264" key="GridCell.Tab.0.center" timestamp="1583817721339">
+      <screen x="0" y="23" width="1440" height="837" />
+    </state>
+    <state width="1398" height="213" key="GridCell.Tab.0.center/0.23.1440.825@0.23.1440.825" timestamp="1583747632072" />
+    <state width="1398" height="264" key="GridCell.Tab.0.center/0.23.1440.837@0.23.1440.837" timestamp="1583817721339" />
+    <state width="1398" height="264" key="GridCell.Tab.0.left" timestamp="1583817721338">
+      <screen x="0" y="23" width="1440" height="837" />
+    </state>
+    <state width="1398" height="213" key="GridCell.Tab.0.left/0.23.1440.825@0.23.1440.825" timestamp="1583747632071" />
+    <state width="1398" height="264" key="GridCell.Tab.0.left/0.23.1440.837@0.23.1440.837" timestamp="1583817721338" />
+    <state width="1398" height="264" key="GridCell.Tab.0.right" timestamp="1583817721339">
+      <screen x="0" y="23" width="1440" height="837" />
+    </state>
+    <state width="1398" height="213" key="GridCell.Tab.0.right/0.23.1440.825@0.23.1440.825" timestamp="1583747632073" />
+    <state width="1398" height="264" key="GridCell.Tab.0.right/0.23.1440.837@0.23.1440.837" timestamp="1583817721339" />
+    <state x="208" y="23" width="1024" height="825" key="SettingsEditor" timestamp="1583748104602">
+      <screen x="0" y="23" width="1440" height="837" />
+    </state>
+    <state x="208" y="23" width="1024" height="825" key="SettingsEditor/0.23.1440.825@0.23.1440.825" timestamp="1583746127093" />
+    <state x="208" y="23" key="SettingsEditor/0.23.1440.837@0.23.1440.837" timestamp="1583748104602" />
+    <state x="560" y="341" key="WebDeployment.AddServerDialog.v.1" timestamp="1583311823608">
+      <screen x="0" y="23" width="1440" height="825" />
+    </state>
+    <state x="560" y="341" key="WebDeployment.AddServerDialog.v.1/0.23.1440.825@0.23.1440.825" timestamp="1583311823608" />
+    <state x="397" y="268" key="com.intellij.ide.util.TipDialog" timestamp="1583311802642">
+      <screen x="0" y="23" width="1440" height="825" />
+    </state>
+    <state x="397" y="268" key="com.intellij.ide.util.TipDialog/0.23.1440.825@0.23.1440.825" timestamp="1583311802642" />
+    <state x="626" y="173" key="ftp.server.browser" timestamp="1583311897981">
+      <screen x="0" y="23" width="1440" height="825" />
+    </state>
+    <state x="626" y="173" key="ftp.server.browser/0.23.1440.825@0.23.1440.825" timestamp="1583311897981" />
+  </component>
+</project>

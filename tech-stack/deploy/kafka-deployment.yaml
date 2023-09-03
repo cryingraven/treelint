@@ -1,0 +1,24 @@
+kind: StatefulSet
+apiVersion: apps/v1beta1
+metadata:
+  name: kafka-master
+  namespace: ambassador
+spec:
+  serviceName: "kafka-service"
+  replicas: 1
+  selector:
+    matchLabels:
+      component: kafka-master
+  template:
+    metadata:
+      labels:
+        component: kafka-master
+    spec:
+      containers:
+        - name: kafka-master
+          image: harisekhon/hadoop
+          ports:
+            - containerPort: 9092
+          resources:
+            requests:
+              cpu: 100m

@@ -1,0 +1,15 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: alluxio-master-service
+  namespace: ambassador
+  labels:
+    app: alluxio-master-service
+spec:
+  ports:
+    - name: alluxio
+      port: 19999
+    - name: worker
+      port: 30000
+  selector:
+    app: alluxio-master

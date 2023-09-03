@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"path": "/Users/alanmaulana/Desktop/TLK8s"
+		}
+	],
+	"settings": {
+		"cloudcode.last-used-context": {
+			"Run on Kubernetes": {
+				"kubeConfigPath": "/Users/alanmaulana/.kube/config",
+				"contextName": "docker-desktop"
+			},
+			"Run All On Kubernetes": {
+				"kubeConfigPath": "/Users/alanmaulana/.kube/config",
+				"contextName": "gke_innate-agency-250312_asia-southeast1-a_deret-data"
+			}
+		}
+	}
+}

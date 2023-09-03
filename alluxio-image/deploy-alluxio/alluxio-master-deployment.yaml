@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: alluxio-master
+  namespace: ambassador
+spec:
+  serviceName: "alluxio-master-service"
+  replicas: 1
+  selector:
+    matchLabels:
+      app: alluxio-master
+  template:
+    metadata:
+      labels:
+        app: alluxio-master
+    spec:
+      containers:
+        - name: alluxio
+          image: kai303/tl-alluxio
+          ports:
+            - name: master-port
+              containerPort: 19999
+            - name: worker-port
+              containerPort: 30000
+          resources:
+            requests:
+              memory: 1Gi
+          volumeMounts:
+            - mountPath: /dev/shm
+              name: dshm
+      volumes:
+        - name: dshm
+          emptyDir: {}

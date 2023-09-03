@@ -1,0 +1,14 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: spark-api-service
+  namespace: ambassador
+  labels:
+    app: spark-api-service
+spec:
+  ports:
+    - name: sparkweb
+      port: 80
+      targetPort: 6066
+  selector:
+    app: spark-master

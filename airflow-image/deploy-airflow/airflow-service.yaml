@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: airflow-service
+  namespace: ambassador
+spec:
+  ports:
+    - name: http
+      port: 8000
+      targetPort: 8080
+    - name: flask
+      port: 3000
+      targetPort: 3000
+  selector:
+    app: airflow

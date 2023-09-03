@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Deret Data | Login</title>
+    <meta name="description" content="Deret Data Login" />
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <!-- Custom CSS -->
+    <link href="https://static.deretdata.com/css/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+
+<!-- HK Wrapper -->
+<div class="hk-wrapper">
+
+    <!-- Main Content -->
+    <div class="hk-pg-wrapper hk-auth-wrapper">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xl-5 pa-0">
+                    <div id="owl_demo_1" class="owl-carousel dots-on-item owl-theme">
+                        <div class="fadeOut item auth-cover-img overlay-wrap" style="background-image:url(https://static.deretdata.com/img/bg2.jpg);">
+                            <div class="auth-cover-info py-xl-0 pt-100 pb-50">
+                                <div class="auth-cover-content text-center w-xxl-75 w-sm-90 w-xs-100">
+                                    <h1 class="display-3 text-white mb-20">Build An AI on Cloud.</h1>
+                                    <p class="text-white">
+                                        Some people worry that artificial intelligence will make us feel inferior, but then, anybody in his right mind should have an inferiority complex every time he looks at a flower.
+                                        Read more at https://www.brainyquote.com/topics/artificial-intelligence-quotes
+                                        - Alan Kay
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="bg-overlay bg-trans-dark-50"></div>
+                        </div>
+                        <div class="fadeOut item auth-cover-img overlay-wrap" style="background-image:url(https://static.deretdata.com/img/bg1.jpg);">
+                            <div class="auth-cover-info py-xl-0 pt-100 pb-50">
+                                <div class="auth-cover-content text-center w-xxl-75 w-sm-90 w-xs-100">
+                                    <h1 class="display-3 text-white mb-20">Expand Your Business</h1>
+                                    <p class="text-white">
+                                        AI is creating tremendous economic value today - Andrew Ng
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="bg-overlay bg-trans-dark-50"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-7 pa-0">
+                    <div class="auth-form-wrap py-xl-0 py-50">
+                        <div class="auth-form w-xxl-65 w-xl-75 w-sm-90 w-100 card pa-25 shadow-lg">
+                            <form method="post" action="/do_login">
+                                <h1 class="display-4 mb-10">
+                                    <img src="https://static.deretdata.com/img/deret.png" style="width: 50%;margin: auto"/>
+                                </h1>
+                                <p class="mb-30">Sign in to your account.</p>
+                                {% for message in get_flashed_messages() %}
+                                <div class="alert alert-danger">{{ message }}</div>
+                                {% endfor %}
+                                <div class="form-group">
+                                    <label>Username</label>
+                                    <input class="form-control" placeholder="Username" type="text" name="username">
+                                </div>
+                                <div class="form-group">
+                                    <label>Password</label>
+                                    <div class="input-group">
+                                        <input class="form-control" placeholder="Password" type="password" name="password">
+                                        <div class="input-group-append">
+                                            <span class="input-group-text"><span class="feather-icon"><i data-feather="eye-off"></i></span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="btn btn-primary btn-block" type="submit">Login</button>
+{#                                <p class="font-14 text-center mt-15">Having trouble logging in? <a href="/forgot">Here</a></p>#}
+{#                                <div class="option-sep">or</div>#}
+{#                                <p class="text-center">Do have an account yet? <a href="/register">Sign Up</a></p>#}
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /Main Content -->
+
+</div>
+<!-- /HK Wrapper -->
+<script src="https://static.deretdata.com/vendors/jquery/dist/jquery.min.js"></script>
+<script src="https://static.deretdata.com/vendors/popper.js/dist/umd/popper.min.js"></script>
+<script src="https://static.deretdata.com/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="https://static.deretdata.com/js/jquery.slimscroll.js"></script>
+<script src="https://static.deretdata.com/js/dropdown-bootstrap-extended.js"></script>
+<script src="https://static.deretdata.com/vendors/owl.carousel/dist/owl.carousel.min.js"></script>
+<script src="https://static.deretdata.com/js/feather.min.js"></script>
+<script src="https://static.deretdata.com/js/init.js"></script>
+<script src="https://static.deretdata.com/js/login-data.js"></script>
+</body>
+
+</html>

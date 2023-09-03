@@ -1,0 +1,24 @@
+apiVersion: apps/v1beta1
+kind: StatefulSet
+metadata:
+  name: airflow
+  namespace: ambassador
+spec:
+  serviceName: "airflow-service"
+  replicas: 1
+  selector:
+    matchLabels:
+      app: airflow
+  template:
+    metadata:
+      labels:
+        app: airflow
+    spec:
+      containers:
+        - name: backend
+          image: kai303/tl-airflow
+          ports:
+            - name: http
+              containerPort: 8080
+            - name: flask
+              containerPort: 3000

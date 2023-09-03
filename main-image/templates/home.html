@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Meta Data | Toward The Better Future </title>
+    <meta name="description" content="A responsive bootstrap 4 admin dashboard template by hencework" />
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link href="https://static.deretdata.com/vendors/jquery-toggles/css/toggles.css" rel="stylesheet" type="text/css">
+    <link href="https://static.deretdata.com/vendors/jquery-toggles/css/themes/toggles-light.css" rel="stylesheet" type="text/css">
+    <link href="https://static.deretdata.com/css/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+	<div class="hk-wrapper hk-nav-alt">
+        {% include 'header.html' %}
+        <div class="hk-pg-wrapper">
+            <div class="container mt-xl-50 mt-sm-30 mt-15">
+                <div class="hk-pg-header align-items-top">
+					<div>
+						<h2 class="hk-pg-title font-weight-600 mb-10">Welcome to DERETDATA[0]</h2>
+						<p>Let's start making something extraordinary.</p>
+					</div>
+				</div>
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 col-sm-12 mb-30">
+                        <div id="new-app" class="card" style="height:280px">
+                            <div class="card-body">
+                                <h5 class="card-title text-muted" style="text-align: center">Create New Application</h5>
+                                <img src="https://static.deretdata.com/img/icons8-plus.png" height="100" style="margin-top: 60px;display: block;margin-left: auto;margin-right: auto;" width="100" class="img-fluid" alt="img">
+                            </div>
+                        </div>
+                    </div>
+                    {% for app in apps %}
+                    <div class="col-lg-4 col-md-6 col-sm-12 mb-30">
+                        <div class="card" style="height:280px">
+                            <div class="card-header">
+                                {{app.category.name}}
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">{{app.name}}</h5>
+                                <p class="card-text">{{app.desc}}</p>
+                            </div>
+                            <div class="card-footer">
+                                <a href="detail_ml/{{app.data_folder}}" class="btn btn-info btn-block">View Detail</a>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+			</div>
+            {% include 'footer.html' %}
+        </div>
+    </div>
+    <div class="modal fade" id="createApp" tabindex="-1" role="dialog" aria-labelledby="createApp" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header" style="border-bottom: 0px !important;">
+                    <h5 class="modal-title">New Applications</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <img src="https://static.deretdata.com/img/icons8-artificial_intelligence.png" height="100" style="display: block;margin-left: auto;margin-right: auto;" width="100" class="img-fluid" alt="img">
+                            <h6 style="text-align: center;margin-top: 10px">Machine Learning</h6>
+                            <div class="text-muted text-center">
+                                Machine learning is an application of artificial intelligence (AI) that provides systems the ability to automatically learn and improve from experience without being explicitly programmed.
+                            </div>
+                        </div>
+                    </div>
+                     <div class="row">
+                        <div class="col-sm-12">
+                            <a href="/new_ml" class="btn btn-info btn-block">Create</a>
+                        </div>
+                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://static.deretdata.com/vendors/jquery/dist/jquery.min.js"></script>
+    <script src="https://static.deretdata.com/vendors/popper.js/dist/umd/popper.min.js"></script>
+    <script src="https://static.deretdata.com/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="https://static.deretdata.com/js/jquery.slimscroll.js"></script>
+    <script src="https://static.deretdata.com/js/dropdown-bootstrap-extended.js"></script>
+    <script src="https://static.deretdata.com/js/feather.min.js"></script>
+    <script src="https://static.deretdata.com/vendors/jquery-toggles/toggles.min.js"></script>
+    <script src="https://static.deretdata.com/js/toggle-data.js"></script>
+	<script src="https://static.deretdata.com/vendors/waypoints/lib/jquery.waypoints.min.js"></script>
+	<script src="https://static.deretdata.com/vendors/jquery.counterup/jquery.counterup.min.js"></script>
+    <script src="https://static.deretdata.com/js/init.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('#new-app').on('click',function(e){
+                // location.href='/new_app'
+                $('#createApp').modal('show');
+            });
+        });
+    </script>
+</body>
+
+</html>

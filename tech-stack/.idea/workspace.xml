@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="f207eb11-026a-4012-a694-0d0ab91be18c" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
+  <component name="ComposerSettings">
+    <execution>
+      <executable />
+    </execution>
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="1" />
+  </component>
+  <component name="ProjectId" id="1Yeoah88Sf4vbTVEaE5y9mLf6ce" />
+  <component name="ProjectViewState">
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="android.sdk.path" value="$USER_HOME$/Library/Android/sdk" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
+    <property name="show.migrate.to.gradle.popup" value="false" />
+  </component>
+  <component name="RunManager" selected="Cloud Code: Kubernetes.Cloud Build">
+    <configuration name="Cloud Build" type="google-container-tools-skaffold-run-config" factoryName="google-container-tools-skaffold-run-config-dev" show_console_on_std_err="false" show_console_on_std_out="false">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="cleanupDeployments" value="false" />
+      <option name="envVariables" />
+      <option name="imageRepositoryOverride" value="gcr.io/innate-agency-250312" />
+      <option name="kubeconfigFile" />
+      <option name="kubernetesContext" />
+      <option name="redeployOnChanges" value="false" />
+      <option name="skaffoldConfigurationFilePath" value="$PROJECT_DIR$/skaffold.yaml" />
+      <option name="skaffoldNamespace" />
+      <option name="skaffoldProfile" value="cloudbuild" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Run Stack" type="google-container-tools-skaffold-run-config" factoryName="google-container-tools-skaffold-run-config-dev" show_console_on_std_err="false" show_console_on_std_out="false">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="cleanupDeployments" value="false" />
+      <option name="envVariables" />
+      <option name="imageRepositoryOverride" value="gcr.io/innate-agency-250312" />
+      <option name="kubeconfigFile" />
+      <option name="kubernetesContext" />
+      <option name="redeployOnChanges" value="false" />
+      <option name="skaffoldConfigurationFilePath" value="$PROJECT_DIR$/skaffold.yaml" />
+      <option name="skaffoldNamespace" />
+      <option name="skaffoldProfile" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Cloud Code: Kubernetes.Cloud Build" />
+      <item itemvalue="Cloud Code: Kubernetes.Run Stack" />
+    </list>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f207eb11-026a-4012-a694-0d0ab91be18c" name="Default Changelist" comment="" />
+      <created>1583312485578</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1583312485578</updated>
+      <workItem from="1583312488300" duration="4856000" />
+      <workItem from="1584085551043" duration="41000" />
+      <workItem from="1584092537660" duration="1947000" />
+      <workItem from="1584097629236" duration="370000" />
+      <workItem from="1584098333986" duration="968000" />
+      <workItem from="1584102370002" duration="12000" />
+      <workItem from="1591204537637" duration="56000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="184" y="97" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1583316847623">
+      <screen x="0" y="23" width="1440" height="825" />
+    </state>
+    <state x="184" y="97" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.825@0.23.1440.825" timestamp="1583316847623" />
+    <state width="1398" height="368" key="GridCell.Tab.0.bottom" timestamp="1583317938867">
+      <screen x="0" y="23" width="1440" height="825" />
+    </state>
+    <state width="1398" height="368" key="GridCell.Tab.0.bottom/0.23.1440.825@0.23.1440.825" timestamp="1583317938867" />
+    <state width="1398" height="368" key="GridCell.Tab.0.center" timestamp="1583317938866">
+      <screen x="0" y="23" width="1440" height="825" />
+    </state>
+    <state width="1398" height="368" key="GridCell.Tab.0.center/0.23.1440.825@0.23.1440.825" timestamp="1583317938866" />
+    <state width="1398" height="368" key="GridCell.Tab.0.left" timestamp="1583317938866">
+      <screen x="0" y="23" width="1440" height="825" />
+    </state>
+    <state width="1398" height="368" key="GridCell.Tab.0.left/0.23.1440.825@0.23.1440.825" timestamp="1583317938866" />
+    <state width="1398" height="368" key="GridCell.Tab.0.right" timestamp="1583317938867">
+      <screen x="0" y="23" width="1440" height="825" />
+    </state>
+    <state width="1398" height="368" key="GridCell.Tab.0.right/0.23.1440.825@0.23.1440.825" timestamp="1583317938867" />
+    <state x="397" y="268" key="com.intellij.ide.util.TipDialog" timestamp="1584102370804">
+      <screen x="0" y="23" width="1440" height="837" />
+    </state>
+    <state x="397" y="268" key="com.intellij.ide.util.TipDialog/0.23.1440.837@0.23.1440.837" timestamp="1584102370804" />
+  </component>
+</project>

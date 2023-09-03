@@ -1,0 +1,91 @@
+{% extends "ml_layout.html" -%}
+{% block css -%}
+<link href="https://static.deretdata.com/vendors/datatables.net-dt/css/jquery.dataTables.min.css" rel="stylesheet" type="text/css" />
+<link href="https://static.deretdata.com/vendors/datatables.net-responsive-dt/css/responsive.dataTables.min.css" rel="stylesheet" type="text/css" />
+{%- endblock css %}
+{% block content -%}
+<div class="container-fluid px-xxl-65 px-xl-20">
+    <br/>
+    <div class="hk-pg-header">
+        <h4 class="hk-pg-title" style="margin-top: 10px">Saved Model</h4>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="table-wrap">
+                <table id="datable_5" class="table table-hover w-100 display">
+                    <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Position</th>
+                        <th>Office</th>
+                        <th>Age</th>
+                        <th>Start date</th>
+                        <th>Salary</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>ett Win</td>
+                        <td>System Architect</td>
+                        <td>Edinburgh</td>
+                        <td>61</td>
+                        <td>2011/04/25</td>
+                        <td>$320,800</td>
+                    </tr>
+                    <tr>
+                        <td>Olivia Liang</td>
+                        <td>Support Engineer</td>
+                        <td>Singapore</td>
+                        <td>64</td>
+                        <td>2011/02/03</td>
+                        <td>$234,500</td>
+                    </tr>
+                    <tr>
+                        <td>Bruno Nash</td>
+                        <td>Software Engineer</td>
+                        <td>London</td>
+                        <td>38</td>
+                        <td>2011/05/03</td>
+                        <td>$163,500</td>
+                    </tr>
+                    <tr>
+                        <td>Sakura Yamamoto</td>
+                        <td>Support Engineer</td>
+                        <td>Tokyo</td>
+                        <td>37</td>
+                        <td>2009/08/19</td>
+                        <td>$139,575</td>
+                    </tr>
+                    <tr>
+                        <td>Adwez Nash</td>
+                        <td>Software Engineer</td>
+                        <td>India</td>
+                        <td>38</td>
+                        <td>2014/05/03</td>
+                        <td>$763,500</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+{%- endblock content %}
+{% block script -%}
+<script src="https://static.deretdata.com/vendors/datatables.net/js/jquery.dataTables.min.js"></script>
+<script src="https://static.deretdata.com/vendors/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
+<script src="https://static.deretdata.com/vendors/datatables.net-dt/js/dataTables.dataTables.min.js"></script>
+<script src="https://static.deretdata.com/vendors/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+<script src="https://static.deretdata.com/vendors/datatables.net-buttons-bs4/js/buttons.bootstrap4.min.js"></script>
+<script src="https://static.deretdata.com/vendors/datatables.net-buttons/js/buttons.flash.min.js"></script>
+<script src="https://static.deretdata.com/vendors/echarts/dist/echarts-en.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#datable_5').dataTable({
+            "bPaginate": false,
+            "info":     false,
+            "bFilter":     false,
+        });
+    });
+</script>
+{%- endblock script %}

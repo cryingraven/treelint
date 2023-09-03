@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Deret Data | Machine Learning</title>
+    <meta name="description" content="A responsive bootstrap 4 admin dashboard template by hencework" />
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    {% block css %}{% endblock css %}
+    <!-- Toggles CSS -->
+    <link href="https://static.deretdata.com/vendors/jquery-toggles/css/toggles.css" rel="stylesheet" type="text/css">
+    <link href="https://static.deretdata.com/vendors/jquery-toggles/css/themes/toggles-light.css" rel="stylesheet" type="text/css">
+    <!-- Custom CSS -->
+    <link href="https://static.deretdata.com/css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<!-- HK Wrapper -->
+<div class="hk-wrapper hk-vertical-nav">
+    <!-- Top Navbar -->
+    {% include 'header.html' %}
+    <!-- /Top Navbar -->
+    <!-- Vertical Nav -->
+    <nav class="hk-nav hk-nav-dark">
+        <a href="javascript:void(0);" id="hk_nav_close" class="hk-nav-close"><span class="feather-icon"><i data-feather="x"></i></span></a>
+        <div class="nicescroll-bar">
+            <div class="navbar-nav-wrap">
+                <ul class="navbar-nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/detail_ml/{{app.data_folder}}">
+                            <i class="ion ion-md-home"></i>
+                            <span class="nav-link-text">Home</span>
+                        </a>
+                    </li>
+                </ul>
+                <hr class="nav-separator">
+                <div class="nav-header">
+                    <span>Aqusition</span>
+                    <span>AQ</span>
+                </div>
+                <ul class="navbar-nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">
+                            <i class="ion ion-md-cloud-circle"></i>
+                            <span class="nav-link-text">Gathering API</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">
+                            <i class="ion ion-md-create"></i>
+                            <span class="nav-link-text">DD Inputer</span>
+                        </a>
+                    </li>
+                </ul>
+                <hr class="nav-separator">
+                <div class="nav-header">
+                    <span>Development</span>
+                    <span>DV</span>
+                </div>
+                <ul class="navbar-nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/ml_upload/{{app.data_folder}}">
+                            <i class="ion ion-md-cloud-upload"></i>
+                            <span class="nav-link-text">Upload Data</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link"href="/ml_process/{{app.data_folder}}">
+                            <i class="ion ion-md-hammer"></i>
+                            <span class="nav-link-text">Processing Model</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/ml_saved/{{app.data_folder}}">
+                            <i class="ion ion-md-cube"></i>
+                            <span class="nav-link-text">Saved Model</span>
+                        </a>
+                    </li>
+                </ul>
+                <hr class="nav-separator">
+                <div class="nav-header">
+                    <span>Deployment</span>
+                    <span>DP</span>
+                </div>
+                <ul class="navbar-nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">
+                            <i class="ion ion-md-globe"></i>
+                            <span class="nav-link-text">Deploy API</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">
+                            <i class="ion ion-md-wifi"></i>
+                            <span class="nav-link-text">Manage Endpoint</span>
+                        </a>
+                    </li>
+                </ul>
+                <hr class="nav-separator">
+                <div class="nav-header">
+                    <span>Access Management</span>
+                    <span>AM</span>
+                </div>
+                <ul class="navbar-nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">
+                            <i class="ion ion-md-desktop"></i>
+                            <span class="nav-link-text">Client Management</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">
+                            <i class="ion ion-md-people"></i>
+                            <span class="nav-link-text">User Management</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">
+                            <i class="ion ion-md-podium"></i>
+                            <span class="nav-link-text">API Usage</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div id="hk_nav_backdrop" class="hk-nav-backdrop"></div>
+    <!-- /Vertical Nav -->
+    <!-- Main Content -->
+    <div class="hk-pg-wrapper">
+        <!-- Container -->
+        {% block content %}{% endblock content %}
+        <!-- /Container -->
+        {% include 'footer.html' %}
+        <div id="loader" style="position: fixed;z-index: 900;bottom: 0;right: 0;display: none">
+            <img src="/img/loading.png"/>
+        </div>
+    </div>
+    <!-- /Main Content -->
+</div>
+<!-- /HK Wrapper -->
+<script src="https://static.deretdata.com/vendors/jquery/dist/jquery.min.js"></script>
+<script src="https://static.deretdata.com/vendors/popper.js/dist/umd/popper.min.js"></script>
+<script src="https://static.deretdata.com/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="https://static.deretdata.com/js/jquery.slimscroll.js"></script>
+<script src="https://static.deretdata.com/js/dropdown-bootstrap-extended.js"></script>
+<script src="https://static.deretdata.com/js/feather.min.js"></script>
+<script src="https://static.deretdata.com/vendors/tablesaw/dist/tablesaw.jquery.js"></script>
+<script src="https://static.deretdata.com/js/tablesaw-data.js"></script>
+<script src="https://static.deretdata.com/vendors/jquery-toggles/toggles.min.js"></script>
+<script src="https://static.deretdata.com/js/toggle-data.js"></script>
+<script src="https://static.deretdata.com/js/init.js"></script>
+{% block script %}{% endblock script %}
+</body>
+</html>
